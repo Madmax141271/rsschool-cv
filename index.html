@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>CV</title>
+    <link rel="stylesheet" href="css/style.css">
+
 </head>
 <body>
+
     <aside class="sidepanel">
         <a href="https://www.facebook.com/max.panineev" class="sidepanel_link">
             <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -22,6 +25,117 @@
         <div class="sidepanel__text">
             <span>Social networks</span>
         </div>
-    </aside> 
+    </aside>
+    <header class="header">
+        <img class="header_img" src="assets/img/IMG_20170210_211111 (2).jpg" alt="myphoto">
+        <h1>Maksim Panineyeu  </h1>
+        <h3>Junior Frontend Developer</h3>
+    </header>
+    <main>  
+       <section class="contacts">
+        <div class="container">
+            <div class="wrapper">
+                <h2>Contact information:</h2>
+                <div class="contacts_data">
+                    <ul class="contacts_links">
+                        <li>Phone: +375 29 750 85 73</li>
+                        <li>E-mail: pan71@tut.by</li>
+                        <li>Telegram: @madmax1412</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+       </section>
+       <section class="aboutme">
+        <div class="container">
+            <div class="wrapper">
+                    <h2 >About myself:</h2>
+                    <div class="aboutme_info">
+                        I'm 50 y.o. I have technical aducation.
+                        I'm going to become a front-end developer
+                    </div>
+            </div>
+        </div>
+       </section>
+       <section class="skills">
+           <div class="wrapper">
+            <h2 >Skills:</h2>
+            <div class="skills_list">
+                <ul class="scills_data">
+                    <li>HTML5, CSS3</li>
+                    <li>JavaScript Basics</li>
+                    <li>VS Code</li>
+                </ul>
+            </div>
+           </div>
+       </section>
+       <section class="example">
+           <div class="wrapper">
+            <h2>Code example:</h2>
+            <pre>
+                
+                    const calc = (size, material, options, promocode, res) => {
+                        const sizeBlock = document.querySelector(size),
+                              materialBlock = document.querySelector(material),
+                              optionsBlock = document.querySelector(options),
+                              promocodeBlock = document.querySelector(promocode),
+                              resBlock = document.querySelector(res);
+                        let sum = 0;
+                        const calcPrice = () => {
+                            sum = Math.round((+sizeBlock.value) * (+materialBlock.value) +
+                             (+optionsBlock.value));
+                            if(sizeBlock.value == '' || materialBlock.value == '') {
+                                resBlock.textContent = 'Пожалуста введите размер и материал картины';
+                            } else if(promocodeBlock.value === 'IWANTPOPART') {
+                                resBlock.textContent = Math.round(sum * 0.7);
+                            } else {
+                                resBlock.textContent = sum;
+                            }
+                        };
+                        sizeBlock.addEventListener('change', calcPrice);
+                        materialBlock.addEventListener('change', calcPrice);
+                        optionsBlock.addEventListener('change', calcPrice);
+                        promocodeBlock.addEventListener('input', calcPrice);
+                    };
+                    export default calc;   
+                
+            </pre>
+           </div>
+       </section>
+       <section class="courses">
+           <div class="wrapper">
+            <h2 >Courses: </h2>
+            <div class="courses_list">
+                <ul class="courses_data">
+                    <li>Udemy: WEB-разработчик 2021</li>
+                    <li>Udemy: Полный курс по JavaScript + React - с нуля до результата  </li>
+                </ul>
+            </div>
+           </div>
+       </section>
+       <section class="lang">
+           <div class="wrapper">
+            <h2 >Languages: </h2>
+            <div class="lang_info">
+             I graduated from the special faculty of the Minsk University of Foreign Languages 
+             my English level is between A2 and B1.Long time i worked only with aviation english.
+            </div>
+           </div>
+       </section>
+    </main>
+    <footer class="footer">
+        <div class="wrapper">
+            <a href="https://www.github.com/Madmax141271" class="footer_link">
+                <img class="footer_githubimg" src="img/github.svg" alt="github">
+                
+            </a>
+            <a href="https://rs.school/js/">
+                <img class="footer_rsschoolimg" src="img/rsschool.svg" alt="rsschool" >
+            </a>
+            <p>© 2021</p>
+        </div>
+        
+    </footer>
+    
 </body>
 </html>
